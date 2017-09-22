@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import FFNetworking
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    // MARK: View controller
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.setupNetworking()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: Setup
+    
+    private func setupNetworking()
+    {
+        Networking.baseURL = "https://httpbin.org/"
+        Networking.addDefaultHeader(forKey: "Authorization", value: "auth-h")
     }
-
+    
+    // MARK: Event handlers
+    
+    @IBAction func onSimpleGetRequest()
+    {
+        ExampleService.sendSimpleGet()
+    }
+    
+    @IBAction func onGetWithArguments()
+    {
+        ExampleService.sendGetWithParameters()
+    }
+    
+    @IBAction func onPostRequest()
+    {
+        ExampleService.sendPostRequest()
+    }
 }
 

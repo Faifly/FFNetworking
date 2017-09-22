@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.5.1)
+  - FFNetworking (0.1.0):
+    - Alamofire
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
+
+DEPENDENCIES:
+  - FFNetworking (from `../`)
+  - Nimble
+  - Quick
+
+EXTERNAL SOURCES:
+  FFNetworking:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  FFNetworking: eabf30163f481f52402a3aaa71aa37c7bbdade53
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+
+PODFILE CHECKSUM: cb58b241817b9d6e3b1e70cde5420d7750fb8252
+
+COCOAPODS: 1.2.1

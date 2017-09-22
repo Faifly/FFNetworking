@@ -1,0 +1,6 @@
+framework module FFNetworking {
+  umbrella header "FFNetworking-umbrella.h"
+
+  export *
+  module * { export * }
+}

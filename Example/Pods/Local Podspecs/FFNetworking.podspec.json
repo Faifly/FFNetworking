@@ -1,0 +1,27 @@
+{
+  "name": "FFNetworking",
+  "version": "0.1.0",
+  "summary": "A short description of FFNetworking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ArKalmykov/FFNetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ArKalmykov": "ar.kalmykov@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ArKalmykov/FFNetworking.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FFNetworking/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  }
+}

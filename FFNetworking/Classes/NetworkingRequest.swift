@@ -29,7 +29,12 @@ public class NetworkingRequest
         let encoding = self.provider.parameterEncoding.alamofireEncoding
         let headers = Networking.defaultHeaders
         
-        self.alamofireRequest = Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = self.provider.timeout
+        configuration.timeoutIntervalForResource = self.provider.timeout
+        let sessionManager = SessionManager(configuration: configuration)
+        
+        self.alamofireRequest = sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers)
         self.alamofireRequest.responseData { (response) in
             self.handleResponse(response)
         }

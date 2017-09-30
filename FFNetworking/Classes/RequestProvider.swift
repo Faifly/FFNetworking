@@ -41,6 +41,7 @@ public protocol RequestProvider
     var parameterEncoding: NetworkingParametersEncoding { get }
     var automaticallyStartRequest: Bool { get }
     var responseType: NetworkingResponseType { get }
+    var timeout: Double { get }
 }
 
 public extension RequestProvider
@@ -73,5 +74,10 @@ public extension RequestProvider
     var usesBaseURL: Bool
     {
         return true
+    }
+    
+    var timeout: Double
+    {
+        return Networking.requestTimeout
     }
 }

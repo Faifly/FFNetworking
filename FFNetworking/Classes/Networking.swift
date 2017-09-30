@@ -13,6 +13,7 @@ public typealias NetworkingCompletionHandler = (_ success: Bool, _ responseObjec
 public class Networking
 {
     public static var baseURL: String?
+    public static var requestTimeout: Double = 10.0
     
     @discardableResult public static func sendRequest(_ provider: RequestProvider, completionHandler: NetworkingCompletionHandler? = nil) -> NetworkingRequest
     {

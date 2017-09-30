@@ -11,7 +11,7 @@ import Alamofire
 
 public enum NetworkingResponseType
 {
-    case rawJson
+    case json
     case data
 }
 
@@ -58,7 +58,7 @@ public extension RequestProvider
     
     var responseType: NetworkingResponseType
     {
-        return .rawJson
+        return .json
     }
     
     var parameters: Any?

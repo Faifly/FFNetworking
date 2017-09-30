@@ -91,7 +91,7 @@ public class NetworkingRequest
         {
         case .data:
             return (data as AnyObject?, nil)
-        case .rawJson:
+        case .json:
             do
             {
                 let result = try JSONSerialization.jsonObject(with: data, options: [])
